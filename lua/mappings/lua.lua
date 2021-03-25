@@ -8,7 +8,15 @@ end
 
 -- keybind list
 map("", "<leader>c", '"+y')
+map("i", "jj", "<Esc>")
+map("n", "<leader>z", ":luafile $MYVIMRC <CR>")
 
 -- open terminals  
-map("n", "<C-b>" , [[<Cmd> vnew term://bash<CR>]] , opt) -- split term vertically , over the right  
-map("n", "<C-x>" , [[<Cmd> split term://bash | resize 10 <CR>]] , opt) -- split term vertically , over the right  
+map("n", "<C-b>" , [[<Cmd> vnew term://zsh<CR>]] , opt) -- split term vertically , over the right  
+map("n", "<C-x>" , [[<Cmd> split term://zsh| resize 10 <CR>]] , opt) -- split term vertically , over the right  
+
+-- windows
+map("n", "<leader>w", "<C-w>v")
+
+-- search
+map("n", "<leader>,", ":noh <CR>", opt)

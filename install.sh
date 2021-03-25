@@ -51,7 +51,7 @@ install_node_deps () {
     echo "npm not installed"
     return
   fi
- sudo npm install -g $@
+ npm install -g $@
 }
 
 install_ts() {
@@ -83,7 +83,7 @@ for lang in ${lsp_langs}; do
     install_$lang
   else
     echo $lang setup not implemented
-    echo 
+    echo
   fi
 done
 

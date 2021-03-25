@@ -20,7 +20,7 @@ local cmd = vim.cmd
 local g = vim.g
 local indent = 2
 
-cmd "colorscheme base16-onedark"
+cmd "colorscheme base16-gruvbox-dark-medium"
 cmd "syntax enable"
 cmd "syntax on"
 
