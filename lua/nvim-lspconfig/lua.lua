@@ -27,9 +27,14 @@ buf_set_keymap("n", "<space>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnosti
 buf_set_keymap("n", "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
 buf_set_keymap("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
 buf_set_keymap("n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
+buf_set_keymap("n", "ga", "<cmd>lua vim.lsp.bug.code_action()<CR>", opts)
+
+local nvim_lsp = require'lspconfig'
 
 --  lsp for html , css and js/ts
-require "lspconfig".tsserver.setup {}
-require "lspconfig".cssls.setup {}
-require "lspconfig".html.setup {}
-require "lspconfig".rust_analyzer.setup {}
+nvim_lsp.tsserver.setup {}
+nvim_lsp.cssls.setup {}
+nvim_lsp.html.setup {}
+nvim_lsp.rust_analyzer.setup {
+  root_dir = nvim_lsp.util.root_pattern("Cargo.toml")
+}
