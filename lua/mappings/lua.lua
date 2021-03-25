@@ -19,4 +19,9 @@ map("n", "<C-x>" , [[<Cmd> split term://zsh| resize 10 <CR>]] , opt) -- split te
 map("n", "<leader>w", "<C-w>v")
 
 -- search
-map("n", "<leader>,", ":noh <CR>", opt)
+map("n", "<leader>,", ":noh <CR>")
+
+-- quickfix list
+map("n", "<C-j>,", ":cnext <CR>")
+map("n", "<C-k>,", ":cprev <CR>")
+

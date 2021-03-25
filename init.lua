@@ -30,6 +30,7 @@ g.indentLine_char_list = {"▏"}
 
 g.mapleader = " "
 
+
 require("treesitter.lua")
 require("mappings.lua")
 
@@ -74,3 +75,4 @@ augroup NvimTree
  ]],
     false
 )
+

@@ -26,5 +26,7 @@ return require("packer").startup(
         use {"nvim-telescope/telescope.nvim"}
         use {"nvim-telescope/telescope-media-files.nvim"}
         use {"nvim-lua/popup.nvim"}
+        use {'b3nj5m1n/kommentary'}
+
     end
 )
